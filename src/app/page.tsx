@@ -47,7 +47,9 @@ export default function Page() {
 	function onSubmit(values: z.infer<typeof classProgramFormSchema>) {
 		// Do something with the form values.
 		// ✅ This will be type-safe and validated.
-		submit(values);
+		submit({
+			prompt: values,
+		});
 	}
 
 	return (
